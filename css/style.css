@@ -26,10 +26,6 @@ body {
   line-height: 1.65;
 }
 
-img {
-  filter: grayscale(100%);
-}
-
 /* Skip link for keyboard/screen-reader users */
 .skip-link {
   position: absolute;
