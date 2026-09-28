@@ -3,7 +3,7 @@
    Monochrome, editorial layout inspired by nmk.go.ke
    ========================================================= */
 
-:root {
+:root {  
   --color-black: #111111;
   --color-white: #ffffff;
   --color-text: #1a1a1a;
@@ -401,6 +401,11 @@ footer.site-footer {
   text-align: center;
   padding: 2rem 1.5rem;
   font-size: 0.85rem;
+}
+
+footer.site-footer p {
+  margin: 0.5rem 0;
+  color: var(--color-white);
 }
 
 footer.site-footer a {
