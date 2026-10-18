@@ -1,322 +1,187 @@
-/* =========================================================
-   Heritage House Museum - Main Stylesheet
-   Monochrome, editorial layout inspired by nmk.go.ke
-   ========================================================= */
+/* Heritage House Museum - stylesheet
+   Colours: black, white and grey */
 
-:root {
-  --color-black: #111111;
-  --color-white: #ffffff;
-  --color-text: #1a1a1a;
-  --color-muted: #666666;
-  --color-border: #d9d9d9;
-  --color-border-strong: #111111;
-  --font-heading: Georgia, 'Times New Roman', serif;
-  --font-body: Helvetica, Arial, sans-serif;
-}
-
+/* ----- General ----- */
 * {
   box-sizing: border-box;
 }
 
 body {
   margin: 0;
-  font-family: var(--font-body);
-  background-color: var(--color-white);
-  color: var(--color-text);
-  line-height: 1.65;
+  font-family: Arial, sans-serif;
+  color: #222222;
+  background-color: #ffffff;
+  line-height: 1.6;
 }
 
-/* Skip link for keyboard/screen-reader users */
-.skip-link {
-  position: absolute;
-  left: -999px;
-  top: auto;
-  background: var(--color-black);
-  color: var(--color-white);
-  padding: 0.5em 1em;
-  z-index: 100;
-}
-.skip-link:focus {
-  left: 0.5em;
-  top: 0.5em;
-}
-
-/* ---------- Header & Navigation ---------- */
-header.site-header {
-  background-color: var(--color-white);
-  color: var(--color-black);
-  padding: 1.25rem 1.5rem;
-  border-bottom: 1px solid var(--color-border-strong);
-}
-
-.site-header .brand {
-  display: flex;
-  align-items: center;
-  gap: 0.85rem;
-  flex-wrap: wrap;
-  max-width: 1100px;
-  margin: 0 auto;
-}
-
-.site-header .logo-mark {
-  width: 40px;
-  height: 40px;
-  border: 1px solid var(--color-black);
-  display: inline-flex;
-  align-items: center;
-  justify-content: center;
-  font-family: var(--font-heading);
-  font-weight: bold;
-  letter-spacing: 0.02em;
-  color: var(--color-black);
-  flex-shrink: 0;
-}
-
-.site-header h1 {
-  font-family: var(--font-heading);
-  margin: 0;
-  font-size: 1.5rem;
-  letter-spacing: 0.01em;
-}
-
-.site-header p.tagline {
-  margin: 0.1rem 0 0;
-  font-size: 0.85rem;
-  color: var(--color-muted);
-  text-transform: uppercase;
-  letter-spacing: 0.06em;
-}
-
-nav.main-nav {
-  margin-top: 1rem;
-  border-top: 1px solid var(--color-border);
-  padding-top: 0.75rem;
-  max-width: 1100px;
-  margin-left: auto;
-  margin-right: auto;
-}
-
-nav.main-nav ul {
-  list-style: none;
-  margin: 0;
-  padding: 0;
-  display: flex;
-  flex-wrap: wrap;
-  gap: 1.4rem;
-}
-
-nav.main-nav a {
-  display: inline-block;
-  padding: 0.2rem 0;
-  color: var(--color-black);
-  text-decoration: none;
-  font-size: 0.85rem;
-  text-transform: uppercase;
-  letter-spacing: 0.05em;
-  border-bottom: 2px solid transparent;
-}
-
-nav.main-nav a:hover,
-nav.main-nav a:focus {
-  border-bottom-color: var(--color-black);
-}
-
-nav.main-nav a[aria-current="page"] {
-  border-bottom-color: var(--color-black);
-  font-weight: bold;
-}
-
-/* ---------- Layout ---------- */
-main {
-  max-width: 1100px;
-  margin: 0 auto;
-  padding: 0 1.5rem 3rem;
-}
-
-.hero {
-  position: relative;
-  width: 100vw;
-  margin-left: calc(50% - 50vw);
-  margin-right: calc(50% - 50vw);
-  margin-bottom: 2.5rem;
-  padding: 6rem 1.5rem;
-  text-align: center;
-  color: var(--color-white);
-  background-color: var(--color-black);
-  background-image: linear-gradient(rgba(0, 0, 0, 0.55), rgba(0, 0, 0, 0.55)), url('../images/hero-museum.jpg');
-  background-size: cover;
-  background-position: center;
-}
-
-.hero h2 {
-  font-family: var(--font-heading);
-  font-size: 2.6rem;
+h1, h2, h3 {
+  font-family: Georgia, serif;
   font-weight: normal;
-  color: var(--color-white);
-  margin-top: 0;
-  letter-spacing: 0.01em;
-}
-
-.hero p {
-  max-width: 620px;
-  margin: 0.75rem auto 0;
-  color: var(--color-white);
-  font-size: 1.05rem;
-}
-
-section {
-  margin-bottom: 3rem;
-}
-
-h1, h2, h3, h4 {
-  font-family: var(--font-heading);
-  font-weight: normal;
-  color: var(--color-black);
 }
 
 h2 {
-  font-size: 1.7rem;
-  border-bottom: 1px solid var(--color-border-strong);
-  padding-bottom: 0.6rem;
-  margin-bottom: 1.5rem;
-}
-
-p {
-  color: var(--color-text);
+  color: #1f4e79;
 }
 
 a {
-  color: var(--color-black);
-  text-decoration-color: var(--color-muted);
+  color: #1f4e79;
 }
 
-a:hover,
-a:focus {
-  text-decoration-thickness: 2px;
+/* ----- Header and navigation ----- */
+/* Logo and menu sit on one line */
+.site-header {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 20px;
+  padding: 15px 20px;
+  background-color: #1f4e79;
+  color: #ffffff;
 }
 
-/* ---------- Cards / Grid ---------- */
+.logo {
+  display: inline-block;
+}
+
+.logo img {
+  height: 70px;
+  display: block;
+}
+
+.main-nav ul {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+.main-nav li {
+  display: inline-block;
+  margin-right: 15px;
+}
+
+.main-nav a {
+  color: #ffffff;
+  text-decoration: none;
+  padding: 5px 8px;
+}
+
+.main-nav a:hover,
+.main-nav a.active {
+  background-color: #f4b942;
+  color: #000000;
+}
+
+/* ----- Main content ----- */
+main {
+  padding: 20px 40px;
+}
+
+section {
+  margin-bottom: 30px;
+}
+
+/* Big picture with text on the home page */
+.banner {
+  background-color: #2a8a8a;
+  color: #ffffff;
+  text-align: center;
+  padding: 70px 20px;
+  margin-bottom: 30px;
+}
+
+.banner h2 {
+  color: #ffffff;
+  font-size: 36px;
+  margin-top: 0;
+}
+
+/* ----- Cards and images ----- */
 .card-grid {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
-  gap: 0;
-  border-top: 1px solid var(--color-border);
-  border-left: 1px solid var(--color-border);
+  display: flex;
+  flex-wrap: wrap;
+  gap: 15px;
 }
 
 .card {
-  background-color: var(--color-white);
-  border-right: 1px solid var(--color-border);
-  border-bottom: 1px solid var(--color-border);
-  padding: 1.5rem;
+  width: 230px;
+  flex-grow: 1;
+  background-color: #eaf1f8;
+  padding: 15px;
 }
 
 .card h3 {
   margin-top: 0;
-  font-size: 1.15rem;
+  color: #1f4e79;
 }
 
-.icon-box {
+.card img {
   width: 100%;
-  height: 1px;
-  margin-bottom: 1rem;
-  background-color: var(--color-border-strong);
-}
-
-.card img,
-.hero-image,
-.page-image {
-  width: 100%;
-  height: 180px;
+  height: 160px;
   object-fit: cover;
-  margin-bottom: 1rem;
-  display: block;
-}
-
-.hero-image {
-  height: 320px;
-  margin-bottom: 1.5rem;
 }
 
 .page-image {
-  height: 260px;
-  margin: 0.5rem 0 1.25rem;
+  width: 100%;
+  height: 250px;
+  object-fit: cover;
 }
 
 figure {
-  margin: 0 0 1.25rem;
+  margin: 0 0 20px 0;
 }
 
 figcaption {
-  font-size: 0.85rem;
-  color: var(--color-muted);
-  margin-top: 0.5rem;
+  font-size: 14px;
+  color: #666666;
 }
 
-/* ---------- Tables ---------- */
+/* ----- Tables ----- */
 table {
   width: 100%;
   border-collapse: collapse;
-  background-color: var(--color-white);
-}
-
-caption {
-  font-weight: bold;
-  text-align: left;
-  padding-bottom: 0.6rem;
-  color: var(--color-black);
 }
 
 th, td {
-  border: 1px solid var(--color-border);
-  padding: 0.65rem 0.85rem;
+  padding: 8px;
   text-align: left;
 }
 
+tr:nth-child(even) {
+  background-color: #eaf1f8;
+}
+
 th {
-  background-color: var(--color-black);
-  color: var(--color-white);
-  font-weight: normal;
-  text-transform: uppercase;
-  font-size: 0.8rem;
-  letter-spacing: 0.04em;
+  background-color: #1f4e79;
+  color: #ffffff;
 }
 
-tr:nth-child(even) td {
-  background-color: #f7f7f7;
-}
-
-/* ---------- FAQ ---------- */
+/* ----- FAQ ----- */
 details {
-  background-color: var(--color-white);
-  border-bottom: 1px solid var(--color-border);
-  padding: 1rem 0;
-  margin-bottom: 0;
+  background-color: #eaf1f8;
+  margin-bottom: 8px;
+  padding: 10px;
 }
 
-details summary {
+summary {
   font-weight: bold;
   cursor: pointer;
-  color: var(--color-black);
 }
 
-/* ---------- Forms ---------- */
+/* ----- Contact form ----- */
 form {
-  background-color: var(--color-white);
-  border: 1px solid var(--color-border-strong);
-  padding: 1.75rem;
-  max-width: 600px;
+  max-width: 800px;
+  background-color: #eaf1f8;
+  padding: 20px;
 }
 
 .form-group {
-  margin-bottom: 1.1rem;
+  margin-bottom: 15px;
 }
 
 label {
   display: block;
   font-weight: bold;
-  margin-bottom: 0.35rem;
-  font-size: 0.9rem;
+  margin-bottom: 4px;
 }
 
 input[type="text"],
@@ -325,98 +190,64 @@ input[type="tel"],
 select,
 textarea {
   width: 100%;
-  padding: 0.55rem 0.65rem;
-  border: 1px solid var(--color-border-strong);
-  font-family: inherit;
-  font-size: 1rem;
-  background-color: var(--color-white);
-  color: var(--color-text);
+  height: 40px;
+  padding: 8px;
+  border: none;
+  font-size: 16px;
+  font-family: Arial, sans-serif;
 }
 
-input:focus,
-select:focus,
-textarea:focus {
-  outline: 2px solid var(--color-black);
-  outline-offset: 1px;
+textarea {
+  height: auto;
+  resize: vertical;
 }
 
 fieldset {
-  border: 1px solid var(--color-border-strong);
-  margin-bottom: 1.1rem;
+  border: none;
+  background-color: #d5e3f0;
+  margin: 0 0 15px 0;
+  padding: 10px 15px;
 }
 
-legend {
-  font-weight: bold;
-  padding: 0 0.4rem;
-  color: var(--color-black);
-  font-size: 0.9rem;
-}
-
-.radio-option,
-.checkbox-option {
-  display: flex;
-  align-items: center;
-  gap: 0.5rem;
+.radio-option label,
+.checkbox-option label {
+  display: inline;
   font-weight: normal;
-  margin-bottom: 0.4rem;
 }
 
-.radio-option input,
-.checkbox-option input {
-  width: auto;
-}
-
-button,
-input[type="submit"] {
-  background-color: var(--color-black);
-  color: var(--color-white);
-  border: 1px solid var(--color-black);
-  padding: 0.65rem 1.6rem;
-  font-size: 0.9rem;
-  text-transform: uppercase;
-  letter-spacing: 0.05em;
+button {
+  background-color: #1f4e79;
+  color: #ffffff;
+  border: none;
+  padding: 10px 25px;
+  font-size: 16px;
   cursor: pointer;
 }
 
-button:hover,
-input[type="submit"]:hover {
-  background-color: var(--color-white);
-  color: var(--color-black);
+button:hover {
+  background-color: #2a8a8a;
 }
 
-.required {
-  color: var(--color-black);
-  font-weight: bold;
-}
-
-/* ---------- Links list ---------- */
-.link-list li {
-  margin-bottom: 0.6rem;
-}
-
-/* ---------- Footer ---------- */
-footer.site-footer {
-  background-color: var(--color-black);
-  color: #cccccc;
+/* ----- Footer ----- */
+.site-footer {
+  background-color: #1f4e79;
+  color: #cfe0ef;
   text-align: center;
-  padding: 2rem 1.5rem;
-  font-size: 0.85rem;
+  padding: 20px;
 }
 
-footer.site-footer a {
-  color: var(--color-white);
+.site-footer a {
+  color: #ffffff;
 }
 
-/* ---------- Responsive ---------- */
+/* ----- Small screens ----- */
 @media (max-width: 600px) {
-  nav.main-nav ul {
-    flex-direction: column;
-    gap: 0.6rem;
+  .main-nav li {
+    display: block;
+    margin-bottom: 8px;
   }
-  .hero {
-    padding: 3rem 1.25rem;
-  }
-  .hero h2 {
-    font-size: 1.8rem;
+
+  .banner h2 {
+    font-size: 26px;
   }
 }
