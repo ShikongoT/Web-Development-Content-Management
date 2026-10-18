@@ -236,6 +236,11 @@ button:hover {
   padding: 20px;
 }
 
+.site-footer p {
+  margin: 8px 0;
+  color: #ffffff;
+}
+
 .site-footer a {
   color: #ffffff;
 }
